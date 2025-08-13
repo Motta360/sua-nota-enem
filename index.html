@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sua Nota do ENEM - Calculadora de Média</title>
+<meta name="description" content="Calcule sua média do ENEM automaticamente. Se não informar pesos, calcula média simples. Se informar, calcula média ponderada.">
+<meta name="keywords" content="ENEM, calculadora ENEM, média ENEM, calcular nota ENEM, média ponderada ENEM, simulador ENEM">
+<meta property="og:title" content="Sua Nota do ENEM - Calcule sua Média">
+<meta property="og:description" content="Ferramenta gratuita que calcula sua média simples ou ponderada do ENEM automaticamente.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seudominio.com">
+<meta property="og:image" content="https://seudominio.com/img/preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sua Nota do ENEM - Calcule sua Média">
+<meta name="twitter:description" content="Calcule sua média do ENEM de forma simples ou ponderada automaticamente.">
+<meta name="twitter:image" content="https://seudominio.com/img/preview.jpg">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Sua Nota do ENEM</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="politica.html">Política de Privacidade</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
+
+<div class="ads">[Anúncio Google AdSense]</div>
+
+<main>
+  <h2>Calcule sua média do ENEM</h2>
+  <form id="form-nota">
+    <div class="campo">
+      <label>Ciências Humanas:</label>
+      <input type="number" step="0.1" id="humanas" placeholder="Nota">
+      <input type="number" step="0.1" id="peso-humanas" placeholder="Peso (opcional)">
+    </div>
+    <div class="campo">
+      <label>Ciências da Natureza:</label>
+      <input type="number" step="0.1" id="natureza" placeholder="Nota">
+      <input type="number" step="0.1" id="peso-natureza" placeholder="Peso (opcional)">
+    </div>
+    <div class="campo">
+      <label>Linguagens:</label>
+      <input type="number" step="0.1" id="linguagens" placeholder="Nota">
+      <input type="number" step="0.1" id="peso-linguagens" placeholder="Peso (opcional)">
+    </div>
+    <div class="campo">
+      <label>Matemática:</label>
+      <input type="number" step="0.1" id="matematica" placeholder="Nota">
+      <input type="number" step="0.1" id="peso-matematica" placeholder="Peso (opcional)">
+    </div>
+    <div class="campo">
+      <label>Redação:</label>
+      <input type="number" step="0.1" id="redacao" placeholder="Nota">
+      <input type="number" step="0.1" id="peso-redacao" placeholder="Peso (opcional)">
+    </div>
+    <button type="button" id="calcular">Calcular Nota</button>
+  </form>
+  <div id="resultado"></div>
+</main>
+
+<div class="ads">[Anúncio Google AdSense]</div>
+
+<footer>
+  <p>© 2025 Sua Nota do ENEM</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
