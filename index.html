@@ -16,57 +16,84 @@
 <meta name="twitter:description" content="Calcule sua média do ENEM de forma simples ou ponderada automaticamente.">
 <meta name="twitter:image" content="https://seudominio.com/img/preview.jpg">
 
-<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<header>
-  <h1>Sua Nota do ENEM</h1>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="politica.html">Política de Privacidade</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+<body class="bg-gray-100 font-sans">
+
+<header class="bg-purple-700 text-white p-4 shadow">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold">Sua Nota do ENEM</h1>
+    <nav class="space-x-4">
+      <a href="index.html" class="hover:underline">Início</a>
+      <a href="sobre.html" class="hover:underline">Sobre</a>
+      <a href="politica.html" class="hover:underline">Política</a>
+      <a href="contato.html" class="hover:underline">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<div class="ads">[Anúncio Google AdSense]</div>
+<div class="container mx-auto my-6">
+  <div class="bg-white p-6 rounded-lg shadow">
+    <h2 class="text-2xl font-bold mb-4 text-center">Calcule sua média do ENEM</h2>
+    
+    <form id="form-nota" class="space-y-4">
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold">Ciências Humanas</label>
+          <input type="number" step="0.1" id="humanas" placeholder="Nota" class="w-full border rounded p-2">
+        </div>
+        <div>
+          <label class="block font-semibold">Peso (opcional)</label>
+          <input type="number" step="0.1" id="peso-humanas" placeholder="Peso" class="w-full border rounded p-2">
+        </div>
 
-<main>
-  <h2>Calcule sua média do ENEM</h2>
-  <form id="form-nota">
-    <div class="campo">
-      <label>Ciências Humanas:</label>
-      <input type="number" step="0.1" id="humanas" placeholder="Nota">
-      <input type="number" step="0.1" id="peso-humanas" placeholder="Peso (opcional)">
-    </div>
-    <div class="campo">
-      <label>Ciências da Natureza:</label>
-      <input type="number" step="0.1" id="natureza" placeholder="Nota">
-      <input type="number" step="0.1" id="peso-natureza" placeholder="Peso (opcional)">
-    </div>
-    <div class="campo">
-      <label>Linguagens:</label>
-      <input type="number" step="0.1" id="linguagens" placeholder="Nota">
-      <input type="number" step="0.1" id="peso-linguagens" placeholder="Peso (opcional)">
-    </div>
-    <div class="campo">
-      <label>Matemática:</label>
-      <input type="number" step="0.1" id="matematica" placeholder="Nota">
-      <input type="number" step="0.1" id="peso-matematica" placeholder="Peso (opcional)">
-    </div>
-    <div class="campo">
-      <label>Redação:</label>
-      <input type="number" step="0.1" id="redacao" placeholder="Nota">
-      <input type="number" step="0.1" id="peso-redacao" placeholder="Peso (opcional)">
-    </div>
-    <button type="button" id="calcular">Calcular Nota</button>
-  </form>
-  <div id="resultado"></div>
-</main>
+        <div>
+          <label class="block font-semibold">Ciências da Natureza</label>
+          <input type="number" step="0.1" id="natureza" placeholder="Nota" class="w-full border rounded p-2">
+        </div>
+        <div>
+          <label class="block font-semibold">Peso (opcional)</label>
+          <input type="number" step="0.1" id="peso-natureza" placeholder="Peso" class="w-full border rounded p-2">
+        </div>
 
-<div class="ads">[Anúncio Google AdSense]</div>
+        <div>
+          <label class="block font-semibold">Linguagens</label>
+          <input type="number" step="0.1" id="linguagens" placeholder="Nota" class="w-full border rounded p-2">
+        </div>
+        <div>
+          <label class="block font-semibold">Peso (opcional)</label>
+          <input type="number" step="0.1" id="peso-linguagens" placeholder="Peso" class="w-full border rounded p-2">
+        </div>
 
-<footer>
+        <div>
+          <label class="block font-semibold">Matemática</label>
+          <input type="number" step="0.1" id="matematica" placeholder="Nota" class="w-full border rounded p-2">
+        </div>
+        <div>
+          <label class="block font-semibold">Peso (opcional)</label>
+          <input type="number" step="0.1" id="peso-matematica" placeholder="Peso" class="w-full border rounded p-2">
+        </div>
+
+        <div>
+          <label class="block font-semibold">Redação</label>
+          <input type="number" step="0.1" id="redacao" placeholder="Nota" class="w-full border rounded p-2">
+        </div>
+        <div>
+          <label class="block font-semibold">Peso (opcional)</label>
+          <input type="number" step="0.1" id="peso-redacao" placeholder="Peso" class="w-full border rounded p-2">
+        </div>
+      </div>
+
+      <button type="button" id="calcular" class="w-full bg-purple-700 text-white font-bold py-3 rounded hover:bg-purple-800 transition">
+        Calcular Nota
+      </button>
+    </form>
+
+    <div id="resultado" class="mt-4 text-center text-xl font-semibold"></div>
+  </div>
+</div>
+
+<footer class="bg-gray-200 p-4 text-center">
   <p>© 2025 Sua Nota do ENEM</p>
 </footer>
 
