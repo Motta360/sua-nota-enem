@@ -3,100 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sua Nota do ENEM - Calculadora de Média</title>
-<meta name="description" content="Calcule sua média do ENEM automaticamente. Se não informar pesos, calcula média simples. Se informar, calcula média ponderada.">
+
+<title>Sua Nota do ENEM - Calculadora de Média Automática</title>
+<meta name="description" content="Calcule sua média do ENEM automaticamente. Se não informar pesos, calcula média simples. Se informar, calcula média ponderada. Grátis e fácil de usar.">
 <meta name="keywords" content="ENEM, calculadora ENEM, média ENEM, calcular nota ENEM, média ponderada ENEM, simulador ENEM">
+<meta name="author" content="Lucas Motta">
+
+<!-- Open Graph -->
 <meta property="og:title" content="Sua Nota do ENEM - Calcule sua Média">
 <meta property="og:description" content="Ferramenta gratuita que calcula sua média simples ou ponderada do ENEM automaticamente.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://seudominio.com">
-<meta property="og:image" content="https://seudominio.com/img/preview.jpg">
+<meta property="og:url" content="https://seusite.com">
+<meta property="og:image" content="https://seusite.com/imagem-preview.jpg">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sua Nota do ENEM - Calcule sua Média">
 <meta name="twitter:description" content="Calcule sua média do ENEM de forma simples ou ponderada automaticamente.">
-<meta name="twitter:image" content="https://seudominio.com/img/preview.jpg">
+<meta name="twitter:image" content="https://seusite.com/imagem-preview.jpg">
 
 <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+/* Navbar principal */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #4f46e5; /* Indigo-700 */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  transition: background-color 0.2s, color 0.2s;
+  border-radius: 0.25rem;
+}
+
+nav a:hover {
+  background-color: #4338ca; /* Indigo-800 */
+  color: #f3f4f6; /* Gray-100 */
+}
+</style>
+
 </head>
 <body class="bg-gray-100 font-sans">
 
-<header class="bg-purple-700 text-white p-4 shadow">
-  <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-xl font-bold">Sua Nota do ENEM</h1>
-    <nav class="space-x-4">
-      <a href="index.html" class="hover:underline">Início</a>
-      <a href="sobre.html" class="hover:underline">Sobre</a>
-      <a href="politica.html" class="hover:underline">Política</a>
-      <a href="contato.html" class="hover:underline">Contato</a>
-    </nav>
-  </div>
-</header>
+<main class="max-w-2xl mx-auto p-4">
+  <header class="text-center mb-6">
+    <h1 class="text-3xl font-bold text-indigo-700">Sua Nota do ENEM</h1>
+    <p class="text-gray-600 mt-2">Calcule automaticamente sua média simples ou ponderada do ENEM. Se não informar pesos, será calculada a média simples.</p>
+  </header>
 
-<div class="container mx-auto my-6">
-  <div class="bg-white p-6 rounded-lg shadow">
-    <h2 class="text-2xl font-bold mb-4 text-center">Calcule sua média do ENEM</h2>
-    
-    <form id="form-nota" class="space-y-4">
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <label class="block font-semibold">Ciências Humanas</label>
-          <input type="number" step="0.1" id="humanas" placeholder="Nota" class="w-full border rounded p-2">
-        </div>
-        <div>
-          <label class="block font-semibold">Peso (opcional)</label>
-          <input type="number" step="0.1" id="peso-humanas" placeholder="Peso" class="w-full border rounded p-2">
-        </div>
+<nav>
+<a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="politica.html">Política de Privacidade</a>
+<a href="contato.html">Contato</a>
+</nav>
 
-        <div>
-          <label class="block font-semibold">Ciências da Natureza</label>
-          <input type="number" step="0.1" id="natureza" placeholder="Nota" class="w-full border rounded p-2">
-        </div>
-        <div>
-          <label class="block font-semibold">Peso (opcional)</label>
-          <input type="number" step="0.1" id="peso-natureza" placeholder="Peso" class="w-full border rounded p-2">
-        </div>
-
-        <div>
-          <label class="block font-semibold">Linguagens</label>
-          <input type="number" step="0.1" id="linguagens" placeholder="Nota" class="w-full border rounded p-2">
-        </div>
-        <div>
-          <label class="block font-semibold">Peso (opcional)</label>
-          <input type="number" step="0.1" id="peso-linguagens" placeholder="Peso" class="w-full border rounded p-2">
-        </div>
-
-        <div>
-          <label class="block font-semibold">Matemática</label>
-          <input type="number" step="0.1" id="matematica" placeholder="Nota" class="w-full border rounded p-2">
-        </div>
-        <div>
-          <label class="block font-semibold">Peso (opcional)</label>
-          <input type="number" step="0.1" id="peso-matematica" placeholder="Peso" class="w-full border rounded p-2">
-        </div>
-
-        <div>
-          <label class="block font-semibold">Redação</label>
-          <input type="number" step="0.1" id="redacao" placeholder="Nota" class="w-full border rounded p-2">
-        </div>
-        <div>
-          <label class="block font-semibold">Peso (opcional)</label>
-          <input type="number" step="0.1" id="peso-redacao" placeholder="Peso" class="w-full border rounded p-2">
-        </div>
-      </div>
-
-      <button type="button" id="calcular" class="w-full bg-purple-700 text-white font-bold py-3 rounded hover:bg-purple-800 transition">
-        Calcular Nota
-      </button>
-    </form>
-
-    <div id="resultado" class="mt-4 text-center text-xl font-semibold"></div>
-  </div>
+<!-- Placeholder topo AdSense -->
+<div id="ad-topo" class="my-4 text-center">
+  <!-- Código do AdSense aqui -->
 </div>
 
-<footer class="bg-gray-200 p-4 text-center">
-  <p>© 2025 Sua Nota do ENEM</p>
-</footer>
+<section class="bg-white shadow-lg rounded-lg p-6">
+  <h2 class="text-xl font-semibold mb-4">Insira suas notas e pesos</h2>
+  <form id="formNotas" class="space-y-4">
+    <div class="grid grid-cols-3 gap-2 items-center">
+      <label for="ling">Linguagens</label>
+      <input type="number" id="ling" placeholder="Nota" class="p-2 border rounded">
+      <input type="number" id="pesoLing" placeholder="Peso" class="p-2 border rounded">
+    </div>
+    <div class="grid grid-cols-3 gap-2 items-center">
+      <label for="hum">Humanas</label>
+      <input type="number" id="hum" placeholder="Nota" class="p-2 border rounded">
+      <input type="number" id="pesoHum" placeholder="Peso" class="p-2 border rounded">
+    </div>
+    <div class="grid grid-cols-3 gap-2 items-center">
+      <label for="nat">Natureza</label>
+      <input type="number" id="nat" placeholder="Nota" class="p-2 border rounded">
+      <input type="number" id="pesoNat" placeholder="Peso" class="p-2 border rounded">
+    </div>
+    <div class="grid grid-cols-3 gap-2 items-center">
+      <label for="mat">Matemática</label>
+      <input type="number" id="mat" placeholder="Nota" class="p-2 border rounded">
+      <input type="number" id="pesoMat" placeholder="Peso" class="p-2 border rounded">
+    </div>
+    <div class="grid grid-cols-3 gap-2 items-center">
+      <label for="red">Redação</label>
+      <input type="number" id="red" placeholder="Nota" class="p-2 border rounded">
+      <input type="number" id="pesoRed" placeholder="Peso" class="p-2 border rounded">
+    </div>
 
-<script src="script.js"></script>
+    <button type="button" onclick="calcularNota()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 w-full">Calcular Nota</button>
+  </form>
+
+  <div id="resultado" class="mt-4 text-lg font-bold text-center"></div>
+
+  <div class="mt-4 flex gap-2 justify-center">
+    <button onclick="compartilharWhatsApp()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Compartilhar no WhatsApp</button>
+  </div>
+</section>
+
+<!-- Placeholder conteúdo AdSense -->
+<div id="ad-conteudo" class="my-4 text-center">
+  <!-- Código do AdSense aqui -->
+</div>
+
+<section class="bg-white shadow-lg rounded-lg p-6 mt-6">
+  <h2 class="text-xl font-semibold mb-3">Histórico de Cálculos</h2>
+  <ul id="historico" class="space-y-1 text-sm text-gray-700"></ul>
+</section>
+
+<section class="mt-8 text-gray-700 text-sm">
+  <h2 class="text-lg font-semibold mb-2">Como funciona o cálculo</h2>
+  <p>O ENEM avalia cinco áreas: Linguagens, Ciências Humanas, Ciências da Natureza, Matemática e Redação. A média simples é calculada somando todas as notas e dividindo por 5. A média ponderada leva em conta um peso específico para cada área, definido pela instituição para a qual você quer se inscrever.</p>
+  <p class="mt-2">Se você não preencher os pesos, esta calculadora automaticamente usará a média simples.</p>
+</section>
+
+<!-- Placeholder rodapé AdSense -->
+<div id="ad-rodape" class="my-4 text-center">
+  <!-- Código do AdSense aqui -->
+</div>
+
+</main>
+
+<script>
+function calcularNota() {
+  let notas = [
+    parseFloat(document.getElementById('ling').value) || 0,
+    parseFloat(document.getElementById('hum').value) || 0,
+    parseFloat(document.getElementById('nat').value) || 0,
+    parseFloat(document.getElementById('mat').value) || 0,
+    parseFloat(document.getElementById('red').value) || 0
+  ];
+
+  let pesos = [
+    parseFloat(document.getElementById('pesoLing').value) || 0,
+    parseFloat(document.getElementById('pesoHum').value) || 0,
+    parseFloat(document.getElementById('pesoNat').value) || 0,
+    parseFloat(document.getElementById('pesoMat').value) || 0,
+    parseFloat(document.getElementById('pesoRed').value) || 0
+  ];
+
+  let usarPonderada = pesos.some(p => p > 0);
+
+  let media;
+  if (usarPonderada) {
+    let somaPesos = pesos.reduce((a,b) => a + (b || 0), 0);
+    let somaNotas = notas.reduce((acc, nota, i) => acc + (nota * (pesos[i] || 0)), 0);
+    media = somaNotas / somaPesos;
+  } else {
+    media = notas.reduce((a,b) => a + b, 0) / notas.length;
+  }
+
+  media = media.toFixed(2);
+  document.getElementById('resultado').textContent = `Sua média final é: ${media}`;
+  salvarHistorico(media, usarPonderada);
+}
+
+function salvarHistorico(media, ponderada) {
+  let historico = JSON.parse(localStorage.getItem('historicoEnem')) || [];
+  historico.unshift({ media, tipo: ponderada ? 'Ponderada' : 'Simples', data: new Date().toLocaleString() });
+  if (historico.length > 10) historico.pop();
+  localStorage.setItem('historicoEnem', JSON.stringify(historico));
+  renderHistorico();
+}
+
+function renderHistorico() {
+  let historico = JSON.parse(localStorage.getItem('historicoEnem')) || [];
+  let lista = document.getElementById('historico');
+  lista.innerHTML = '';
+  historico.forEach(item => {
+    lista.innerHTML += `<li>(${item.data}) - Média ${item.tipo}: <b>${item.media}</b></li>`;
+  });
+}
+
+function compartilharWhatsApp() {
+  let resultado = document.getElementById('resultado').textContent;
+  if (!resultado) {
+    alert('Calcule sua média antes de compartilhar!');
+    return;
+  }
+  let url = `https://wa.me/?text=${encodeURIComponent("Minha nota no ENEM: " + resultado)}`;
+  window.open(url, '_blank');
+}
+
+renderHistorico();
+</script>
+
 </body>
 </html>
